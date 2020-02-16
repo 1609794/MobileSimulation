@@ -10,21 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Listview"
+            android:label="@string/title_activity_listview"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".ui.login.LoginActivity"
             android:label="@string/title_activity_login" />
         <activity
             android:name=".row_list_item"
-            android:label="@string/title_activity_row_list_item"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/title_activity_row_list_item" />
         <activity
-            android:name=".Graphview2"
-            android:label="@string/title_activity_graphview2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:name=".Graphview"
+            android:label="@string/title_activity_graphview" />
+        <activity
+            android:name=".ResultsShowActivity"
+            android:parentActivityName=".Navigate" />
         <activity
             android:name=".Navigate"
             android:label="@string/title_activity_navigate"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ResultsShowActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

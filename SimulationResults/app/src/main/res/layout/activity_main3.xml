@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     android:id="@+id/relativeLayout1"
     android:layout_height="fill_parent"
@@ -11,60 +12,12 @@
         android:text="First"
         android:layout_weight="1">
     </TextView>
-
     <TextView
         android:id="@+id/SecondText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Second"
+        android:text="First"
         android:layout_weight="1">
     </TextView>
 
-    <TextView
-        android:id="@+id/ThirdText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Third"
-        android:layout_weight="1">
-    </TextView>
-
-    <TextView
-        android:id="@+id/FourthText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Fourth"
-        android:layout_weight="1">
-    </TextView>
-
-    <TextView
-        android:id="@+id/FifthText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Fifth"
-        android:layout_weight="1">
-    </TextView>
-
-    <TextView
-        android:id="@+id/SixthText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Sixth"
-        android:layout_weight="1">
-    </TextView>
-
-    <TextView
-        android:id="@+id/SeventhText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Seven"
-        android:layout_weight="1">
-    </TextView>
-
-    <TextView
-        android:id="@+id/EighthText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Eight"
-        android:layout_weight="1">
-    </TextView>
 </LinearLayout>

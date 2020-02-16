@@ -37,7 +37,7 @@ public class Navigate extends AppCompatActivity {
         graph.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent goToNextPage = new Intent(Navigate.this, Graphview2.class);
+                Intent goToNextPage = new Intent(Navigate.this, Graphview.class);
                 startActivity(goToNextPage);
                 finish();
             }

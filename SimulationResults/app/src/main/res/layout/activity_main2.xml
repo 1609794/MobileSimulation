@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main2"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/fab_margin"
-    android:paddingLeft="@dimen/fab_margin"
-    android:paddingRight="@dimen/fab_margin"
-    android:paddingTop="@dimen/fab_margin"
-    tools:context = "com.example.simulationresults.Graphview2">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <ListView
-        android:id="@+id/listView"
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView4"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-</RelativeLayout>
+        android:layout_height="700dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="700dp"
+            android:orientation="vertical">
+
+            <GridView
+                android:id="@+id/gridView"
+                android:layout_width="1091dp"
+                android:layout_height="700dp"
+
+                android:layout_alignParentLeft="true"
+                android:numColumns="12" />
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

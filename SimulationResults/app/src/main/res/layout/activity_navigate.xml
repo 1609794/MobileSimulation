@@ -29,8 +29,10 @@
             android:id="@+id/table"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#00FCF9F6"
+            android:backgroundTint="#A28F03"
             android:contentDescription="@string/title_activity_navigate"
-            android:text="Table"
+            android:text="List"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -42,13 +44,27 @@
             android:id="@+id/Graph"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:background="#00FCF9F6"
             android:text="Graph"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.443" />
+            app:layout_constraintVertical_bias="0.461" />
+
+        <Button
+            android:id="@+id/LogOut"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#00FCF9F6"
+            android:text="Logout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.594" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
