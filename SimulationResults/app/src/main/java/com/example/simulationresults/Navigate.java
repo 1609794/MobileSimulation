@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -15,6 +16,8 @@ import android.widget.Button;
 
 public class Navigate extends AppCompatActivity {
     static String TAG = "Main Activity - Page";
+    private FirebaseAuth mAuth;
+    private Button logOut;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +27,9 @@ public class Navigate extends AppCompatActivity {
         Log.i(TAG, "Navigation view Started");
         Button table = findViewById(R.id.table);
         Button graph = findViewById(R.id.Graph);
+        logOut = (Button) findViewById(R.id.LogOut);
+
+        mAuth = FirebaseAuth.getInstance();
 
         table.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +46,15 @@ public class Navigate extends AppCompatActivity {
                 Intent goToNextPage = new Intent(Navigate.this, Graphview.class);
                 startActivity(goToNextPage);
                 finish();
+            }
+        });
+
+        logOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mAuth.signOut();
+                finish();
+                startActivity(new Intent(Navigate.this, LoginActivity.class));
             }
         });
     }
