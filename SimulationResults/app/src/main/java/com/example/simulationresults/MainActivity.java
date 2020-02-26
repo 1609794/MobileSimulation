@@ -9,25 +9,28 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     static String TAG = "Main Activity - Page";//used for log items
-    static int nextPage = Config.defaultStartPage;//used to store the page to go to after delay
-    static int splashTimeOut = Config.welcomePageSplashTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.i(TAG, "Application Started");
+        openActivity();
+    }
 
-        new Handler().postDelayed(new Runnable() {
+    public void openActivity()
+    {
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent goToNextPage = new Intent(MainActivity.this, Navigate.class);
-                startActivity(goToNextPage);
+
+                Intent go = new Intent(MainActivity.this, Navigate.class);
+                startActivity(go);
                 finish();
+
             }
-        }, splashTimeOut);
-
-
+        }, 5000);
     }
 
 

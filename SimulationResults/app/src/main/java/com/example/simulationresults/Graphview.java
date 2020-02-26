@@ -1,6 +1,9 @@
 package com.example.simulationresults;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
@@ -11,6 +14,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import java.io.File;
 
 
 public class Graphview extends AppCompatActivity {
@@ -40,6 +45,7 @@ public class Graphview extends AppCompatActivity {
             R.drawable.west_kordofan_4_rescaled,
             R.drawable.numagents
     };
+
     String[] names = {
             "Adjumani",
             "Error",

@@ -54,6 +54,8 @@
         android:id="@+id/register"
         android:layout_width="100dp"
         android:layout_height="57dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/cardview_light_background"
         android:text="Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,9 +66,10 @@
 
     <TextView
         android:id="@+id/backLog"
-        android:layout_width="168dp"
-        android:layout_height="43dp"
+        android:layout_width="172dp"
+        android:layout_height="58dp"
         android:text="Already signed in? Login"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.474"
