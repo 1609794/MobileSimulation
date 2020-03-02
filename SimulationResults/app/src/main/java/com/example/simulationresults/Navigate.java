@@ -2,17 +2,14 @@ package com.example.simulationresults;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-import com.google.firebase.auth.FirebaseAuth;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Navigate extends AppCompatActivity {
     static String TAG = "Main Activity - Page";
@@ -28,6 +25,7 @@ public class Navigate extends AppCompatActivity {
         Button table = findViewById(R.id.table);
         Button graph = findViewById(R.id.Graph);
         logOut = (Button) findViewById(R.id.LogOut);
+        Button btn = findViewById(R.id.server);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -55,6 +53,15 @@ public class Navigate extends AppCompatActivity {
                 mAuth.signOut();
                 finish();
                 startActivity(new Intent(Navigate.this, LoginActivity.class));
+            }
+        });
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent goToNextPage = new Intent(Navigate.this, SSH.class);
+                startActivity(goToNextPage);
+                finish();
             }
         });
     }

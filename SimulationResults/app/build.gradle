@@ -37,5 +37,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation files('libs/jsch-0.1.44.jar')
+    implementation files('libs/jsch-0.1.54.jar')
+    //implementation group: 'com.jcraft', name: 'jsch', version: '0.1.54'
 }
