@@ -1,5 +1,11 @@
 package com.example.simulationresults;
 
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.Button;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.jcraft.jsch.Channel;
@@ -13,31 +19,32 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
 public class SSH extends AppCompatActivity {
-   // private Button btn;
+    private Button btn;
 
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_ssh);
-//        new AsyncTask<Integer, Void, Void>() {
-//            @Override
-//            protected Void doInBackground(Integer... params) {
-//                try {
-//                    SSHReadFile("cs16rrj1", "KatEdison123", "168.62.179.129", 22);
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//                return null;
-//            }
-//        }.execute(1);
-//
-//    }
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_ssh);
+         btn = (Button) findViewById(R.id.server);
+        new AsyncTask<Integer, Void, Void>() {
+            @Override
+            protected Void doInBackground(Integer... params) {
+                try {
+                    SSHReadFile();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+        }.execute(1);
 
-    public static void main(String[] args)throws Exception{
+    }
+
+    public static void SSHReadFile()throws Exception{
         String hostname = "168.62.179.129";
         String username = "cs16rrj1";
         String password = "KatEdison123";
-        String command = "hostname\nexit\n";
+        String command = "cd /home/cs16rrj1/business\ncat sales.txt\nexit\n";
         try {
             JSch jsch = new JSch();
             Session session = jsch.getSession(username, hostname, 22);
@@ -79,6 +86,11 @@ public class SSH extends AppCompatActivity {
         catch (IOException | JSchException ioEx) {
             System.err.println(ioEx.toString());
         }
+    }
+    public boolean onOptionsItemSelected(MenuItem item){
+        Intent myIntent = new Intent(getApplicationContext(), Navigate.class);
+        startActivityForResult(myIntent, 0);
+        return true;
     }
 }
 

@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent go = new Intent(MainActivity.this, SSH.class);
+                Intent go = new Intent(MainActivity.this, Navigate.class);
                 startActivity(go);
                 finish();
 
