@@ -8,8 +8,6 @@ import android.widget.GridView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import org.apache.commons.text.TextStringBuilder;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -19,18 +17,14 @@ import java.util.Arrays;
 
 import static android.R.layout.simple_list_item_1;
 
-
-public class ResultsShowActivity extends AppCompatActivity {
-
+public class ResultsBurundi extends AppCompatActivity {
     static String TAG = "Results Page View"; //used to log items
     ArrayList<String> csvLine = new ArrayList<>();
-    private TextStringBuilder outputBuffer;
 
-    //ListView mList;
     public ArrayList<String> ReadDataCSV() {
         String[] content = null;
         try {
-            InputStream is = getAssets().open("out.csv");
+            InputStream is = getAssets().open("outBurundi.csv");
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
             String line = "";
             while ((line = reader.readLine()) != null) {
@@ -45,18 +39,17 @@ public class ResultsShowActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_burundi_layout);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ReadDataCSV();
 
-        GridView gridView = (GridView) findViewById(R.id.gridView);
+        GridView gridView = (GridView) findViewById(R.id.gridView2);
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, simple_list_item_1, csvLine);
         gridView.setAdapter(arrayAdapter);
     }
 
-
     public boolean onOptionsItemSelected(MenuItem item){
-        Intent myIntent = new Intent(getApplicationContext(), Navigate.class);
+        Intent myIntent = new Intent(getApplicationContext(), NavBurundi.class);
         startActivityForResult(myIntent, 0);
         return true;
     }

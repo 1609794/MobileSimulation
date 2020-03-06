@@ -9,42 +9,33 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Navigate extends AppCompatActivity {
+public class NavMali extends AppCompatActivity {
     static String TAG = "Main Activity - Page";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_navigate);
+        setContentView(R.layout.activity_nav_mali);
 //        Toolbar toolbar = findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
         Log.i(TAG, "Navigation view Started");
-        Button table = findViewById(R.id.tableSudan);
-        Button graph = findViewById(R.id.GraphSudan);
-        Button btn = findViewById(R.id.serverSudan);
+        Button table = findViewById(R.id.tableMali);
+        Button btn = findViewById(R.id.serverMali);
 
         table.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent goToNextPage = new Intent(Navigate.this, ResultsShowActivity.class);
+                Intent goToNextPage = new Intent(NavMali.this, ResultsMali.class);
                 startActivity(goToNextPage);
                 finish();
             }
         });
 
-        graph.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent goToNextPage = new Intent(Navigate.this, Graphview.class);
-                startActivity(goToNextPage);
-                finish();
-            }
-        });
+
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent goToNextPage = new Intent(Navigate.this, SSH.class);
+                Intent goToNextPage = new Intent(NavMali.this, SSH.class);
                 startActivity(goToNextPage);
                 finish();
             }

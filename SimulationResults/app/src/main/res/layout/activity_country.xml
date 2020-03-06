@@ -26,50 +26,75 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/tableSudan"
+            android:id="@+id/Burundi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimaryDark"
             android:contentDescription="@string/title_activity_navigate"
-            android:text="Table"
+            android:text="Burundi"
             android:textColor="@color/cardview_light_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.209" />
+            app:layout_constraintVertical_bias="0.308" />
 
         <Button
-            android:id="@+id/GraphSudan"
+            android:id="@+id/CAR"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="376dp"
             android:background="@color/colorPrimaryDark"
-            android:text="Graph"
+            android:text="Central Africa Republic"
             android:textColor="@color/cardview_light_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tableSudan"
-            app:layout_constraintVertical_bias="0.603" />
+            app:layout_constraintTop_toBottomOf="@+id/Burundi"
+            app:layout_constraintVertical_bias="0.115" />
 
         <Button
-            android:id="@+id/serverSudan"
+            android:id="@+id/Mali"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="284dp"
             android:background="@color/colorPrimaryDark"
-            android:text="Server"
+            android:text="Mali"
             android:textColor="@color/cardview_light_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/GraphSudan"
-            app:layout_constraintVertical_bias="0.766" />
+            app:layout_constraintTop_toBottomOf="@+id/CAR"
+            app:layout_constraintVertical_bias="0.145" />
 
+        <Button
+            android:id="@+id/SouthSudan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:text="South Sudan"
+            android:textColor="@color/cardview_light_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Mali"
+            app:layout_constraintVertical_bias="0.141" />
+
+        <Button
+            android:id="@+id/LogOut"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:text="Log out"
+            android:textColor="@color/cardview_light_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SouthSudan"
+            app:layout_constraintVertical_bias="0.272" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

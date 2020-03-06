@@ -25,7 +25,7 @@ public class SSH extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ssh);
-         btn = (Button) findViewById(R.id.server);
+         btn = (Button) findViewById(R.id.serverSudan);
         new AsyncTask<Integer, Void, Void>() {
             @Override
             protected Void doInBackground(Integer... params) {
@@ -37,20 +37,24 @@ public class SSH extends AppCompatActivity {
                 return null;
             }
         }.execute(1);
+  //  getHostName("sorry not possible");
 
     }
 
-    public static void SSHReadFile()throws Exception{
+    public static void SSHReadFile(){
         String hostname = "168.62.179.129";
         String username = "cs16rrj1";
         String password = "KatEdison123";
-        String command = "cd /home/cs16rrj1/business\ncat sales.txt\nexit\n";
-        try {
+        String command = "hostname\nexit\n";
+            try {
             JSch jsch = new JSch();
             Session session = jsch.getSession(username, hostname, 22);
             session.setUserInfo(new SSHUserInfo(username, password));
-            session.setConfig("StrictHostKeyChecking", "no");
+            java.util.Properties config = new java.util.Properties();
+            config.put("StrictHostKeyChecking", "no");
+            session.setConfig(config);
             session.connect();
+
             Channel channel = session.openChannel("shell");
             channel.setInputStream(new ByteArrayInputStream(command.getBytes(StandardCharsets.UTF_8)));
             channel.setOutputStream(System.out);
@@ -59,7 +63,7 @@ public class SSH extends AppCompatActivity {
             int exitStatus = -1;
 
             channel.connect();
-
+              //  channel.get("C:/source/local/path/file.zip", "/target/remote/path/file.zip");
             while (true) {
                 for (int c; ((c = in.read()) >= 0);) {
                     outBuff.append((char) c);
@@ -92,6 +96,18 @@ public class SSH extends AppCompatActivity {
         startActivityForResult(myIntent, 0);
         return true;
     }
+//
+//    public static String getHostName(String defValue) {
+//        try {
+//            Method getString = Build.class.getDeclaredMethod("getString", String.class);
+//            getString.setAccessible(true);
+//            System.out.print(getString.invoke(null, "net.hostname").toString() + "HELLO");
+//            return getString.invoke(null, "net.hostname").toString();
+//        } catch (Exception ex) {
+//            return defValue;
+//        }
+//    }
+
 }
 
 

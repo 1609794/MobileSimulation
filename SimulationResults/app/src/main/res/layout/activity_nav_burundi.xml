@@ -26,7 +26,7 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/tableSudan"
+            android:id="@+id/tableBurundi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimaryDark"
@@ -35,31 +35,31 @@
             android:textColor="@color/cardview_light_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.209" />
-
-        <Button
-            android:id="@+id/GraphSudan"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="376dp"
-            android:background="@color/colorPrimaryDark"
-            android:text="Graph"
-            android:textColor="@color/cardview_light_background"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tableSudan"
-            app:layout_constraintVertical_bias="0.603" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.308" />
+
+<!--        <Button-->
+<!--            android:id="@+id/GraphBurundi"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="372dp"-->
+<!--            android:background="@color/colorPrimaryDark"-->
+<!--            android:text="Graph"-->
+<!--            android:textColor="@color/cardview_light_background"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/tableBurundi"-->
+<!--            app:layout_constraintVertical_bias="1.0" />-->
 
         <Button
-            android:id="@+id/serverSudan"
+            android:id="@+id/serverBurundi"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="284dp"
+            android:layout_marginBottom="280dp"
             android:background="@color/colorPrimaryDark"
             android:text="Server"
             android:textColor="@color/cardview_light_background"
@@ -67,8 +67,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/GraphSudan"
-            app:layout_constraintVertical_bias="0.766" />
+            app:layout_constraintTop_toBottomOf="@+id/tableBurundi"
+            app:layout_constraintVertical_bias="0.416" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

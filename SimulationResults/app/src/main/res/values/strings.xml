@@ -18,4 +18,6 @@
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_main3">Main3Activity</string>
     <string name="title_activity_listview">Listview</string>
+    <string name="title_activity_country">Country</string>
+    <string name="title_activity_malilayout">Malilayout</string>
 </resources>
