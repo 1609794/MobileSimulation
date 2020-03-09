@@ -52,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if (user != null) {
-                    Intent intent = new Intent(LoginActivity.this, Country.class);
+                    Intent intent = new Intent(LoginActivity.this, MapsActivity.class);
                     startActivity(intent);
                     finish();
                 }
@@ -114,7 +114,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if(emailCheck){
             finish();
-            startActivity(new Intent(LoginActivity.this, Country.class));
+            startActivity(new Intent(LoginActivity.this, MapsActivity.class));
         }
         else{
             Toast.makeText(this, "Need to Verify email address", Toast.LENGTH_SHORT).show();

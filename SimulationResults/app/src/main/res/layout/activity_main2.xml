@@ -2,20 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-<!--<RelativeLayout-->
-<!--    android:id="@+id/header"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:layout_alignParentTop = "true"-->
-<!--    android:gravity="center" >-->
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_margin="5dp"-->
-<!--        android:text="Fixed Header"-->
-<!--        android:textColor="#000"-->
-<!--        android:textSize="20sp" />-->
-<!--</RelativeLayout>-->
+
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView4"
         android:layout_width="match_parent"

@@ -20,4 +20,5 @@
     <string name="title_activity_listview">Listview</string>
     <string name="title_activity_country">Country</string>
     <string name="title_activity_malilayout">Malilayout</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

@@ -38,5 +38,6 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation files('libs/jsch-0.1.54.jar')
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
     //implementation group: 'com.jcraft', name: 'jsch', version: '0.1.54'
 }

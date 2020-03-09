@@ -9,8 +9,11 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class NavBurundi extends AppCompatActivity {
     static String TAG = "Main Activity - Page";
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +24,8 @@ public class NavBurundi extends AppCompatActivity {
         Button table = findViewById(R.id.tableBurundi);
        // Button graph = findViewById(R.id.GraphBurundi);
         Button btn = findViewById(R.id.serverBurundi);
-
+        mAuth = FirebaseAuth.getInstance();
+        Button logout = findViewById(R.id.LogOut);
         table.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,10 +52,20 @@ public class NavBurundi extends AppCompatActivity {
                 finish();
             }
         });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mAuth.signOut();
+                finish();
+                startActivity(new Intent(NavBurundi.this, LoginActivity.class));
+            }
+        });
+
     }
 
     public boolean onOptionsItemSelected(MenuItem item){
-        Intent myIntent = new Intent(getApplicationContext(), Country.class);
+        Intent myIntent = new Intent(getApplicationContext(), MapsActivity.class);
         startActivityForResult(myIntent, 0);
         return true;
     }
