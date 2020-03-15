@@ -53,6 +53,9 @@ public class CAR extends AppCompatActivity {
         startActivityForResult(myIntent, 0);
         return true;
     }
+    @Override
+    public void onBackPressed(){
 
+    }
 
 }

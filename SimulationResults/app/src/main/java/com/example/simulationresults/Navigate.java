@@ -18,6 +18,7 @@ public class Navigate extends AppCompatActivity {
         setContentView(R.layout.activity_navigate);
 //        Toolbar toolbar = findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
+
         Log.i(TAG, "Navigation view Started");
         Button table = findViewById(R.id.tableSudan);
         Button graph = findViewById(R.id.GraphSudan);
@@ -49,12 +50,17 @@ public class Navigate extends AppCompatActivity {
                 finish();
             }
         });
-    }
 
+    }
+    @Override
+    public void onBackPressed(){
+
+    }
     public boolean onOptionsItemSelected(MenuItem item){
         Intent myIntent = new Intent(getApplicationContext(), MapsActivity.class);
         startActivityForResult(myIntent, 0);
         return true;
+
     }
 
 }

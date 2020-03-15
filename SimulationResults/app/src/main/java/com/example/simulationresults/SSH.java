@@ -37,16 +37,17 @@ public class SSH extends AppCompatActivity {
                 return null;
             }
         }.execute(1);
-  //  getHostName("sorry not possible");
+
 
     }
+
 
     public static void SSHReadFile(){
         String hostname = "168.62.179.129";
         String username = "cs16rrj1";
         String password = "KatEdison123";
         String command = "hostname\nexit\n";
-            try {
+        try {
             JSch jsch = new JSch();
             Session session = jsch.getSession(username, hostname, 22);
             session.setUserInfo(new SSHUserInfo(username, password));
@@ -63,7 +64,6 @@ public class SSH extends AppCompatActivity {
             int exitStatus = -1;
 
             channel.connect();
-              //  channel.get("C:/source/local/path/file.zip", "/target/remote/path/file.zip");
             while (true) {
                 for (int c; ((c = in.read()) >= 0);) {
                     outBuff.append((char) c);
@@ -96,18 +96,10 @@ public class SSH extends AppCompatActivity {
         startActivityForResult(myIntent, 0);
         return true;
     }
-//
-//    public static String getHostName(String defValue) {
-//        try {
-//            Method getString = Build.class.getDeclaredMethod("getString", String.class);
-//            getString.setAccessible(true);
-//            System.out.print(getString.invoke(null, "net.hostname").toString() + "HELLO");
-//            return getString.invoke(null, "net.hostname").toString();
-//        } catch (Exception ex) {
-//            return defValue;
-//        }
-//    }
+    @Override
+    public void onBackPressed(){
 
+    }
 }
 
 

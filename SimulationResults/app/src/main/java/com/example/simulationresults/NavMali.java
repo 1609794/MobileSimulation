@@ -41,7 +41,10 @@ public class NavMali extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public void onBackPressed(){
 
+    }
     public boolean onOptionsItemSelected(MenuItem item){
         Intent myIntent = new Intent(getApplicationContext(), MapsActivity.class);
         startActivityForResult(myIntent, 0);

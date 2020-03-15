@@ -26,7 +26,21 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.668" />
+            app:layout_constraintVertical_bias="0.534" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="322dp"
+            android:layout_height="192dp"
+            android:text="Helping Brunel Researchers view supercomputer generated results for refugee migration in different countries"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+            android:textColor="#202F86"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.785" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -34,10 +48,10 @@
             android:layout_height="268dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.417"
+            app:layout_constraintHorizontal_bias="0.462"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.183"
+            app:layout_constraintVertical_bias="0.071"
             app:srcCompat="@drawable/brunel" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

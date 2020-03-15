@@ -121,6 +121,9 @@ public class LoginActivity extends AppCompatActivity {
             mAuth.signOut();
         }
     }
+    @Override
+    public void onBackPressed(){
 
+    }
 
 }
