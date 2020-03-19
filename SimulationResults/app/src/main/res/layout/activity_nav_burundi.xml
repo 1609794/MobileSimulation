@@ -70,21 +70,6 @@
             app:layout_constraintTop_toBottomOf="@+id/tableBurundi"
             app:layout_constraintVertical_bias="0.416" />
 
-        <Button
-            android:id="@+id/LogOut"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="280dp"
-            android:background="@color/colorPrimaryDark"
-            android:text="Log out"
-            android:textColor="@color/cardview_light_background"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/serverBurundi"
-            app:layout_constraintVertical_bias="1.0" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

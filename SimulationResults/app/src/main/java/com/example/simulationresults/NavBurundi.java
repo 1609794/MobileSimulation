@@ -56,19 +56,6 @@ public class NavBurundi extends AppCompatActivity {
             }
         });
 
-
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mAuth.signOut();
-                finish();
-                startActivity(new Intent(NavBurundi.this, LoginActivity.class));
-                MainActivity timer = new MainActivity();
-                System.out.println( "RUNNING TIME " + timer.getRunningTime());
-            }
-
-        });
-
     }
     @Override
     public void onBackPressed(){
