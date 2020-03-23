@@ -81,7 +81,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(CameraUpdateFactory.newLatLng(S));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(C));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(B));
-        LatLng(googleMap,"LocationSudan.csv");
+        LatLng(googleMap, "Location.csv");
     }
 
     @Override

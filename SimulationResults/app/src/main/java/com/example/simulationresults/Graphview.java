@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class Graphview extends AppCompatActivity {
-    static String TAG = "Main Activity - Page";
+    static String TAG = "Graph Sudan - Page";
     ListView mListView;
     int[] images = {
             R.drawable.adjumani4rescaled,

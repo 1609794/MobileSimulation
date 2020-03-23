@@ -40,20 +40,20 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.259" />
 
-<!--        <Button-->
-<!--            android:id="@+id/GraphCAR"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginBottom="376dp"-->
-<!--            android:background="@color/colorPrimaryDark"-->
-<!--            android:text="Graph"-->
-<!--            android:textColor="@color/cardview_light_background"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="1.0"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/tableCAR"-->
-<!--            app:layout_constraintVertical_bias="0.585" />-->
+        <Button
+            android:id="@+id/GraphCAR"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="376dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Graph"
+            android:textColor="@color/cardview_light_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableCAR"
+            app:layout_constraintVertical_bias="0.939" />
 
         <Button
             android:id="@+id/serverCAR"
@@ -65,10 +65,10 @@
             android:textColor="@color/cardview_light_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tableCAR"
-            app:layout_constraintVertical_bias="0.445" />
+            app:layout_constraintVertical_bias="1.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,7 +19,7 @@ public class NavCAR extends AppCompatActivity {
 //        setSupportActionBar(toolbar);
         Log.i(TAG, "Navigation view Started");
         Button table = findViewById(R.id.tableCAR);
-      //  Button graph = findViewById(R.id.GraphCAR);
+        Button graph = findViewById(R.id.GraphCAR);
         Button btn = findViewById(R.id.serverCAR);
 
         table.setOnClickListener(new View.OnClickListener() {
@@ -31,14 +31,14 @@ public class NavCAR extends AppCompatActivity {
             }
         });
 
-//        graph.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent goToNextPage = new Intent(NavCAR.this, Graphview.class);
-//                startActivity(goToNextPage);
-//                finish();
-//            }
-//        });
+        graph.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent goToNextPage = new Intent(NavCAR.this, CARGraphs.class);
+                startActivity(goToNextPage);
+                finish();
+            }
+        });
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

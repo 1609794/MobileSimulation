@@ -20,6 +20,7 @@ public class NavMali extends AppCompatActivity {
         Log.i(TAG, "Navigation view Started");
         Button table = findViewById(R.id.tableMali);
         Button btn = findViewById(R.id.serverMali);
+        Button graph = findViewById(R.id.GraphMali);
 
         table.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,7 +32,14 @@ public class NavMali extends AppCompatActivity {
         });
 
 
-
+        graph.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent goToNextPage = new Intent(NavMali.this, MaliGraphs.class);
+                startActivity(goToNextPage);
+                finish();
+            }
+        });
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent go = new Intent(MainActivity.this, MapsActivity.class);
+                Intent go = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(go);
                 finish();
 
